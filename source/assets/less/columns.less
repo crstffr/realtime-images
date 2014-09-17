@@ -1,0 +1,143 @@
+@import "_mixins";
+
+/* ==========================================================================
+   C O L U M N S
+   ========================================================================== */
+
+/* Rows and Percentage Columns */
+
+.row {
+    .clearfix();
+    width: 100%;
+    > * {
+        .column;
+    }
+}
+
+.column {
+    float: left;
+    height: 100%;
+    position: relative;
+    .box-sizing(border-box);
+}
+
+/* Size Specific Column Breakpoints */
+
+.size-mobile .row.break-mobile > *,
+.size-tablet .row.break-tablet > *,
+.size-desktop .row.break-desktop > *,
+.size-large .row.break-large > * {
+    width: 100%;
+}
+
+
+.one-up {
+    > * {
+        .calc-column-width(1);
+    }
+}
+
+.two-up {
+    > * {
+        .calc-column-width(2);
+    }
+}
+
+.three-up {
+    > * {
+        .calc-column-width(3);
+    }
+    .span2 {
+        .calc-column-width(3,2);
+    }
+}
+
+.four-up {
+    > * {
+        .calc-column-width(4);
+    }
+    .span2 {
+        .calc-column-width(4,2);
+    }
+    .span3 {
+        .calc-column-width(4,3);
+    }
+}
+
+.five-up {
+    > * {
+        .calc-column-width(5);
+    }
+    .span2 {
+        .calc-column-width(5,2);
+    }
+    .span3 {
+        .calc-column-width(5,3);
+    }
+    .span4 {
+        .calc-column-width(5,4);
+    }
+}
+
+.six-up {
+    > * {
+        .calc-column-width(6);
+    }
+    .span2 {
+        .calc-column-width(6,2);
+    }
+    .span3 {
+        .calc-column-width(6,3);
+    }
+    .span4 {
+        .calc-column-width(6,4);
+    }
+    .span5 {
+        .calc-column-width(6,5);
+    }
+}
+
+.seven-up {
+    > * {
+        .calc-column-width(7);
+    }
+    .span2 {
+        .calc-column-width(7,2);
+    }
+    .span3 {
+        .calc-column-width(7,3);
+    }
+    .span4 {
+        .calc-column-width(7,4);
+    }
+    .span5 {
+        .calc-column-width(7,5);
+    }
+    .span6 {
+        .calc-column-width(7,6);
+    }
+}
+
+.eight-up {
+    > * {
+        .calc-column-width(8);
+    }
+    .span2 {
+        .calc-column-width(8,2);
+    }
+    .span3 {
+        .calc-column-width(8,3);
+    }
+    .span4 {
+        .calc-column-width(8,4);
+    }
+    .span5 {
+        .calc-column-width(8,5);
+    }
+    .span6 {
+        .calc-column-width(8,6);
+    }
+    .span7 {
+        .calc-column-width(8,7);
+    }
+}

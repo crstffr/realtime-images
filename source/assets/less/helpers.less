@@ -1,0 +1,278 @@
+@import "_mixins";
+
+/* ==========================================================================
+   H E L P E R S
+   ========================================================================== */
+
+.clear {
+    clear: both;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.ib {
+    position: relative;
+    display: inline-block;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.border-box {
+    .box-sizing(border-box);
+}
+
+.pad-t60 {
+    padding-top: 60px;
+}
+
+.pad-t30 {
+    padding-top: 30px;
+}
+
+.pad-t20 {
+    padding-top: 20px;
+}
+
+.pad-t15 {
+    padding-top: 15px;
+}
+
+.pad-t10 {
+    padding-top: 10px;
+}
+
+.pad-t5 {
+    padding-top: 5px;
+}
+
+
+.pad-b60 {
+    padding-bottom: 30px;
+}
+
+.pad-b30 {
+    padding-bottom: 30px;
+}
+
+.pad-b20 {
+    padding-bottom: 20px;
+}
+
+.pad-b15 {
+    padding-bottom: 15px;
+}
+
+.pad-b10 {
+    padding-bottom: 10px;
+}
+
+.pad-b5 {
+    padding-bottom: 5px;
+}
+
+
+.pad-r20 {
+    padding-right: 20px;
+}
+
+.pad-r15 {
+    padding-right: 15px;
+}
+
+.pad-r10 {
+    padding-right: 10px;
+}
+
+.pad-r5 {
+    padding-right: 5px;
+}
+
+
+.pad-l20 {
+    padding-left: 20px;
+}
+
+.pad-l15 {
+    padding-left: 15px;
+}
+
+.pad-l10 {
+    padding-left: 10px;
+}
+
+.pad-l5 {
+    padding-left: 5px;
+}
+
+.round {
+    .border-radius(3px);
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.no-stretch {
+    width: auto;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-doublespace,
+.text-doublespace p {
+    line-height: 2em;
+}
+
+.is-ipad .noflicker {
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+}
+
+/* Horizontal and Vertical Center */
+
+.hv-center {
+    width: 100%;
+    height: 100%;
+    display: table;
+    > div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+/* Vertical Center */
+
+.centerVertical { }
+
+.v-center {
+    height: 100%;
+    display: table;
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+/* Horizontal Center Block Elements of Unknown Width */
+
+.centerHorizontal { }
+
+.h-center {
+    overflow: hidden;
+    position: relative;
+    > * {
+        left: 50%;
+        float: left;
+        position: relative;
+        > * {
+            left: -50%;
+            position: relative;
+        }
+    }
+}
+
+/* Horizontal lists */
+
+.h-list {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+}
+
+/* Vertical lists */
+
+.v-list {
+    margin: 0;
+    padding: 0;
+    li {
+        position: relative;
+        list-style: none;
+    }
+}
+
+/* Image Replacement */
+
+.ir {
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+    background-color: transparent;
+    &:before {
+        width: 0;
+        height: 150%;
+        content: "";
+        display: block;
+    }
+}
+
+/* Visibility Helpers */
+
+.hide, .hidden {
+    display: none;
+}
+
+.show {
+  display: block;
+}
+
+.visuallyhidden {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    &.focusable:active,
+    &.focusable:focus {
+        margin: 0;
+        clip: auto;
+        height: auto;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/* Floating Clear Fix */
+
+.clearfix {
+    .clearfix();
+}
+
+/* Remove the orange click border on dynamic controls */
+
+a[href="#"] {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.repaint {
+    .repaint();
+}
+
+@-webkit-keyframes bugfix {
+    from { fill: 0; }
+    to { fill: 0; }
+}

@@ -1,0 +1,194 @@
+@import "_mixins";
+
+/* ==========================================================================
+   B A S E
+   ========================================================================== */
+
+html, body {
+    width: 100%;
+    height: auto;
+    background: white;
+    color: black;
+}
+
+body, form {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+    position: relative;
+    .box-sizing(border-box);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    position: relative;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    outline: none;
+}
+
+a,
+label,
+input,
+select,
+textarea {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active, a:visited, a:focus {
+    outline: none;
+}
+
+span {
+    display: inline-block;
+}
+
+strong {
+    .font-weight(regular);
+}
+
+hr {
+    display: block;
+    clear: both;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid;
+    margin: 1em 0;
+    padding: 0;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.5em;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    white-space: pre-wrap;
+}
+
+blockquote {
+    padding: 1em 1.5em;
+    margin: 0 0 1em;
+    font-size: 1.2em;
+    border-left: 5px solid;
+}
+
+blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child {
+    margin-bottom: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset, dd, dt, dl {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+ul.bullets {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+ul.bullets li {
+    padding-left: 0;
+    text-indent: 0;
+}
+
+ul.bullets li span {
+    display: inline-block;
+    padding-left: 21px;
+}
+
+ul.bullets li:before {
+    content: "\00BB";
+    position: absolute;
+}
+
+figure img {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    background: #f7f7f7;
+
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 1px solid #d9d9d9;
+    border-top: 0;
+
+    .border-bottom-left-radius(3px);
+    .border-bottom-right-radius(3px);
+
+    caption {
+        background: #f7f7f7;
+        padding: 2.1rem 0 1.8rem;
+        border: 1px solid #d9d9d9;
+        .border-top-left-radius(3px);
+        .border-top-right-radius(3px);
+    }
+
+    thead th {
+        padding: 1.6rem 0;
+    }
+
+    tbody tr {
+
+        td {
+            text-align: center;
+            padding: 1.4rem 0;
+        }
+
+        &:nth-child(odd) {
+            background: #eaeaea;
+        }
+
+    }
+
+}
+

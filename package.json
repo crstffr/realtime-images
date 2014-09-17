@@ -1,0 +1,42 @@
+{
+  "name": "realtime-images",
+  "version": "0.1.0",
+  "description": "Publish images from Dropbox directly to Cloudinary",
+  "author": {
+    "name": "Christopher Mason",
+    "url": "https://github.com/crstffr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crstffr/realtime-images"
+  },
+  "dependencies": {
+    "async": "~0.9.0",
+    "cloudinary": "~1.0.12",
+    "easyimage": "~1.0.1",
+    "extend": "~1.3.0",
+    "firebase": "~1.0.21",
+    "firebase-token-generator": "~1.1.3",
+    "moment": "^2.8.3",
+    "node-uuid": "~1.4.1",
+    "recursive-readdir": "~1.2.0",
+    "rimraf": "~2.2.8",
+    "rsvp": "~3.0.13",
+    "traverse": "~0.6.6",
+    "watch": "~0.11.0",
+    "winston": "~0.7.3",
+    "winston-papertrail": "~0.1.4",
+    "promise-queue": "~2.1.1",
+    "require-analyzer": "0.5.x",
+    "grunt": "~0.4.5",
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-usemin": "~2.4.0",
+    "grunt-lineending": "~0.2.3",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-uglify": "~0.5.1"
+  }
+}

@@ -1,0 +1,433 @@
+@import "_mixins";
+
+/* ==========================================================================
+   L A Y O U T
+   ========================================================================== */
+
+html {
+    height: 100%;
+    &, body {
+        width: 100%;
+    }
+    body {
+        min-height: 100%;
+    }
+}
+
+body * {
+    .box-sizing(border-box);
+}
+
+#main {
+    height: 100%;
+}
+
+#main-info {
+    position: fixed;
+    height: 100%;
+    min-width: 350px;
+    text-align: center;
+    width: @layout-left-width;
+
+    background: url(../img/aside-bg-board-gray.jpg) center center no-repeat;
+    background-size: cover;
+
+    .logo {
+
+        width: 300px;
+        margin: 10% auto 0 auto;
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .title {
+            color: @color-spark-blue;
+            font-size: 3.5em;
+            display: inline-block;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .subtitle {
+            color: white;
+            font-weight: normal;
+        }
+
+    }
+
+    .copyright,
+    .powered-by {
+        p {
+            margin: 0 0 .5em 0;
+            font-size: 11px;
+            line-height: 1.5em;
+            color: #aaa;
+        }
+    }
+
+    .bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+    }
+
+}
+
+#main-content {
+    min-height: 100%;
+    margin-left: @layout-left-width;
+    width: @layout-right-width;
+    max-width: @layout-right-max;
+    padding: 2em 6em 0;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+
+    &.post-detail {
+        padding-bottom: @size-1;
+        .post {
+            margin: 10% 0 0;
+        }
+    }
+}
+
+.post {
+    margin: @size-1 0;
+}
+
+.post-detail {
+    .post-title {
+        margin-top: @size-1*1.5;
+    }
+}
+
+.post-title {
+    font-weight: bold;
+    margin: @size-1*2 0 .5em 0;
+
+    i {
+        vertical-align: baseline;
+    }
+}
+
+.well {
+    padding: 1.5em;
+    margin-top: 0;
+}
+
+.post-excerpt {
+    margin: @size-1*2 0;
+    .post-meta {
+        margin-top: @size-1;
+    }
+    p > img {
+        max-width: 100%;
+        margin: 1em 0;
+    }
+}
+
+.post-meta {
+    .clearfix();
+}
+
+.post-meta-data {
+    float: left;
+    display: block;
+    text-transform: uppercase;
+    .font-size(11,11);
+
+    i {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+}
+
+.post-meta-data:last-of-type {
+    float: right;
+}
+
+.post-meta-data:first-of-type {
+    float: left;
+}
+
+.post-content {
+
+    p > img {
+        max-width: 100%;
+        margin: 1em 0;
+    }
+
+    iframe {
+        margin-top: 1em;
+    }
+
+}
+
+.post-footer {
+
+    .section {
+        margin: 2em 0;
+    }
+
+    hr {
+        margin: 3em 0 4.5em 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    i {
+        margin-right: 5px;
+    }
+
+}
+
+
+.music-post {
+    h2, h3, h4, h5, h6 {
+        margin: 0 0 .25em;
+    }
+    iframe {
+        margin-top: 1em;
+    }
+}
+
+.text-divider {
+    margin: @size-1 0;
+}
+
+
+
+
+
+
+
+
+.picture-app-container {
+
+    @navwidth: 15%;
+    @viewwidth: 100% - @navwidth;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .menu {
+        position: fixed;
+        width: @navwidth;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        ul {
+
+            li {
+
+                a {
+                    display: block;
+                    padding: 18px;
+                    text-decoration: none;
+
+                    &.has-children:after {
+                        content: '>';
+                        position: absolute;
+                        width: 20px;
+                        right: 0;
+                    }
+
+                }
+
+                &.waSlideMenu-back a:after {
+                    content: '';
+                }
+
+            }
+        }
+
+    }
+
+    .viewport {
+
+        width: @viewwidth;
+        position: absolute;
+        left: @navwidth;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        .msg-loading,
+        .msg-empty {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            span {
+                width: 100%;
+                display: block;
+                text-align: center;
+                line-height: 100%;
+            }
+        }
+
+        .image-container {
+
+            position: absolute;
+            width: 100%;
+            height: auto;
+            padding: 25px;
+
+            .image-wrapper {
+
+                -webkit-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.25);
+                -moz-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.25);
+                box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.25);
+            }
+
+        }
+
+    }
+
+}
+
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+
+    .image-wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 25px;
+
+        .image {
+            display: block;
+            position: relative;
+            margin: auto;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: @layout-breakpoint) {
+    #main-info,
+    #main-content {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding-top: 1px;
+    }
+
+    #main-info {
+
+        height: auto;
+
+        .logo {
+            margin-top: 3%;
+            padding-bottom: 3%;
+            width: 250px;
+            img {
+                width: 150px;
+            }
+            .title {
+                font-size: 2.75em;
+            }
+        }
+
+        .bottom {
+            display: none;
+        }
+
+    }
+
+    #main-content {
+        padding: 2em 1.5em 2em;
+        max-width: none;
+
+        & > .post {
+            margin: 10% 0;
+        }
+
+        .post-meta-data:last-of-type {
+            margin-top: 2.5%;
+            clear: left;
+            float: left;
+        }
+
+        .post-footer {
+            margin-top: 2em;
+            hr {
+                margin: 1em 0 3em 0;
+            }
+        }
+
+        .well {
+            padding: .75em;
+        }
+
+    }
+
+    .picture-app-container {
+
+        @navwidth: 25%;
+        @viewwidth: 100% - @navwidth;
+
+        .menu {
+            width: @navwidth;
+            .menu-item {
+                font-size: 12px;
+
+                a {
+                    padding: 6px 6px 6px 12px;
+
+                    &.has-children:after {
+                        width: 16px;
+                    }
+                }
+            }
+        }
+
+        .viewport {
+            width: @viewwidth;
+            left: @navwidth;
+        }
+
+    }
+
+
+
+    .overlay {
+
+        .image-wrapper {
+
+            padding: 5px;
+
+            .image {
+
+            }
+
+        }
+
+    }
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: @layout-breakpoint) {
+
+
+
+}

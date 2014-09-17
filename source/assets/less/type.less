@@ -1,0 +1,162 @@
+@import "_mixins";
+
+/* ==========================================================================
+   T Y P E
+   ========================================================================== */
+
+html body {
+    font-family: Arial, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    .font-weight(regular);
+}
+
+body {
+    .font-size(14, 24);
+}
+
+input, textarea {
+    font-family: sans-serif;
+    .font-size(14, 24);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    .font-weight(bold);
+    margin: 1.25em 0 .5em 0;
+    a, a:hover {
+
+    }
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+h1, .h1 {
+    .font-size(24, 24);
+}
+
+h2, .h2 {
+    .font-size(22, 22);
+}
+
+h3, .h3 {
+    .font-size(20, 20);
+}
+
+h4, .h4 {
+    .font-size(14, 14);
+}
+
+h5, .h5 {
+    .font-size(13, 13);
+}
+
+h6, .h6 {
+    .font-size(12, 12);
+}
+
+figcaption, .caption {
+    .font-size(12, 12);
+    margin-top: 2.5rem;
+}
+
+table {
+
+    caption {
+        .font-size(18,18);
+    }
+
+    thead {
+        .font-size(14,14);
+        .font-weight(bold);
+        text-transform: uppercase;
+    }
+
+    tbody {
+        .font-size(12,12);
+    }
+
+}
+
+/* Font Weights */
+
+.thin {
+    font-weight: 100;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.semi {
+    font-weight: 600;
+}
+
+.bold, .strong {
+    font-weight: 700;
+}
+
+.extrabold {
+    font-weight: 800;
+}
+
+.black {
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text-divider {
+    .font-size(14, 30);
+    .font-weight(semibold);
+    width: 100%;
+    height: 30px;
+    display: block;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.text-divider:after {
+    border-top: 1px solid;
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.text-divider:after {
+    top: 14px;
+}
+
+.text-divider span {
+    padding: 0 1em;
+}
+
+.small {
+    font-size: 90%;
+}
+
+.smaller {
+    font-size: 80%;
+}
+
+.smallest {
+    font-size: 70%;
+}

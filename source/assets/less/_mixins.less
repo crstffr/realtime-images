@@ -1,0 +1,89 @@
+
+@import "_config";
+@import "_lesshat";
+@import "_flexbox";
+
+.clearfix() {
+    *zoom: 1;
+    .lt-ie9 & { overflow: hidden; }
+    &::before, &::after { content: ""; display: table; }
+    &::after { clear: both; }
+}
+
+.calc-column-width(@cols, @span: 1) {
+    @width: ((100 / @cols) * @span);
+    width: ~"@{width}%";
+}
+
+.font-weight(thin){
+    font-weight: 100;
+}
+.font-weight(light){
+    font-weight: 300;
+}
+.font-weight(regular){
+    font-weight: 400;
+}
+.font-weight(medium){
+    font-weight: 500;
+}
+.font-weight(semibold){
+    font-weight: 600;
+}
+.font-weight(bold){
+    font-weight: 700;
+}
+.font-weight(extrabold){
+    font-weight: 800;
+}
+.font-weight(black){
+    font-weight: 900;
+}
+
+.font-size(@fontPxSize) {
+    @fontRemSize: (@fontPxSize / 10);
+    font-size: ~"@{fontPxSize}px";
+    font-size: ~"@{fontRemSize}rem";
+}
+
+.font-size(@fontPxSize, @linePxHeight) {
+    .font-size(@fontPxSize);
+    @lineRemHeight: (@linePxHeight / 10);
+    line-height: ~"@{linePxHeight}px";
+    line-height: ~"@{lineRemHeight}rem";
+}
+
+.repaint() {
+    -webkit-animation: bugfix infinite 1s;
+}
+
+.insetMargin(@num) {
+    @margin: (3.125 * @num);
+    @width: (100 - (@margin * 2));
+    margin-left: ~"@{margin}%";
+    margin-right: ~"@{margin}%";
+    width: ~"@{width}%";
+}
+
+.insetPad(@num) {
+    @pad: (3.125 * @num);
+    padding-left: ~"@{pad}%";
+    padding-right: ~"@{pad}%";
+}
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Center-Container {
+  position: relative;
+}
+
+.Absolute-Center {
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}

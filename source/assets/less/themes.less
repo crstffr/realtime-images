@@ -1,0 +1,194 @@
+@import "_mixins";
+@import "type";
+
+/* ==========================================================================
+   T H E M E S
+   ========================================================================== */
+
+.logo .title {
+    font-family: Lato, sans-serif;
+}
+
+
+.theme-light {
+
+    color: @theme-light-body;
+    background: @theme-light-background;
+
+    a {
+        color: @theme-light-links;
+        font-weight: bold;
+    }
+
+    hr {
+        border-color: @theme-light-divider;
+    }
+
+    blockquote {
+        border-color: @theme-light-divider;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        & {
+            color: @theme-light-heading;
+        }
+        a {
+            color: @theme-light-links;
+        }
+    }
+
+    *::selection {
+        background: @theme-light-body;
+        color: @theme-light-background;
+    }
+
+    *::-moz-selection {
+        background: @theme-light-body;
+        color: @theme-light-background;
+    }
+
+    code {
+        color: #c7254e;
+        background-color: #f9f2f4;
+        border-radius: 4px;
+    }
+
+    pre, .well {
+        color: @theme-light-code;
+        background-color: #f5f5f5;
+        border: 1px solid @theme-light-divider;
+        border-radius: 4px;
+    }
+
+    pre code {
+        color: inherit;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .post-title {
+        a {
+            color: @theme-light-heading;
+        }
+    }
+
+    .post-content,
+    .post-excerpt {
+        p > img {
+            border: 1px solid @theme-light-divider;
+        }
+    }
+
+    .post-footer i {
+        color: @theme-light-heading;
+    }
+
+    .btn {
+        &, a& { color: @theme-light-heading; }
+        background-color: @theme-light-default-btn;
+        border-color: darken(@theme-light-default-btn, 5%);
+        &:active {
+            background-color: darken(@theme-light-default-btn, 2%);
+        }
+    }
+
+    .btn-primary {
+        &, a& { color: white; }
+        background-color: @theme-light-primary-btn;
+        border-color: darken(@theme-light-primary-btn, 5%);
+        &:active {
+            background-color: darken(@theme-light-primary-btn, 2%);
+        }
+    }
+
+    .text-divider {
+
+        color: @theme-light-bullet;
+
+        &:after {
+            border-color: @theme-light-divider;
+        }
+
+        span {
+            background: @theme-light-background;
+        }
+    }
+
+}
+
+.theme-dark {
+
+    color: @theme-dark-body;
+    background: @theme-dark-background;
+
+}
+
+
+
+.picture-app-container {
+
+    font-family: "Open Sans", Arial, sans-serif;
+
+    .theme-light & {
+
+        @view-background: @color-white;
+        @menu-background: darken(@view-background, 4%);
+        @menu-border: 1px solid darken(@menu-background, 10%);
+        @menu-bg-hover: lighten(@menu-background, 2%);
+        @menu-bg-select: lighten(@menu-background, 4%);
+
+        background: @view-background;
+
+        .menu {
+
+            background: @menu-background;
+            border-right: @menu-border;
+
+            font-size: 16px;
+            letter-spacing: 0.03em;
+
+
+            ul {
+                li {
+                    a {
+                        .light;
+                        color: @color-offblack;
+                        border-bottom: @menu-border;
+                        &:hover {
+                            background: @menu-bg-hover;
+                        }
+                    }
+
+                    &.selected > a {
+                        background: @menu-bg-select;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .viewport {
+
+            .msg-loading, .msg-empty {
+                color: darken(@menu-background, 10%);
+                font-size: 65px;
+            }
+
+            .image-container {
+
+                .image-wrapper {
+                    background: url(/assets/img/blank-checker.gif);
+                }
+
+            }
+
+        }
+
+
+
+    }
+
+
+}
